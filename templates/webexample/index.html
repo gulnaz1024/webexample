@@ -1,0 +1,21 @@
+{% extends 'webexample/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <p>Hello everyone!</p>
+    {% if tasks %}
+        {% for el in tasks%}
+            <div class="alert alert-warning mt-2">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.tasks }}</p>
+            </div>
+        {% endfor%}
+    {% else %}
+        <p>empty</p>
+    {% endif %}            
+{% endblock %}
+
+
